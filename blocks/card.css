@@ -32,7 +32,8 @@
   height: 20px;
   border: none;
   background-color: transparent;
-  color: rgba (33, 33, 33, 1);
+  color: rgba(33, 33, 33, 1);
+  opacity: 40%;
   margin-top: auto;
 }
 
