@@ -74,9 +74,6 @@ function getCardElement(data) {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
     previewModalImageEl.alt = data.name;
-    previewModalImageEl.textContent = data.name;
-    previewModalCaptionEl.src = data.link;
-    previewModalCaptionEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
   });
 
@@ -92,7 +89,6 @@ function openModal(modal) {
 }
 
 function closeModal(modal) {
-  modal.classList.add("modal_is-closed");
   modal.classList.remove("modal_is-opened");
 }
 
@@ -105,6 +101,7 @@ function handleEditFormSubmit(evt) {
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
+  evt.target.reset();
   const inputvalues = { name: cardNameInput.value, link: cardLinkInput.value };
   const cardElement = getCardElement(inputvalues);
   cardList.prepend(cardElement);

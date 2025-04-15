@@ -105,6 +105,7 @@
     align-items: center;
     text-align: center;
     padding: 20px 0;
+    width: 288px;
   }
 
   .profile__avatar {
