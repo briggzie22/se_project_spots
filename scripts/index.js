@@ -89,7 +89,7 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  document.addEventListener("keyup", handleEscDown);
+  document.addEventListener("keydown", handleEscDown);
   modals.forEach((modal) => {
     modal.addEventListener("mousedown", handleModalClose);
   });
