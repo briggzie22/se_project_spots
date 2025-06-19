@@ -93,6 +93,8 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  modal.removeEventListener("mousedown", handleModalClose);
+  document.body.removeEventListener("keydown", handleEscDown);
 }
 
 function handleEditFormSubmit(evt) {
